@@ -5,8 +5,14 @@ import Image from "next/image";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ButtonGroup from "./ButtonGroup";
+import img2 from "../../public/testimonials/2.png"
+import img1 from "../../public/testimonials/1.png"
+import img3 from "../../public/testimonials/3.png"
+import img4 from "../../public/testimonials/4.png"
+import img5 from "../../public/testimonials/5.png"
+import img6 from "../../public/testimonials/6.png"
 
-const Card = ({ star, title, imgSrc }) => {
+const Card = ({ star, title, imgSrc, desc }) => {
   return (
     <div className="mx-2 flex flex-col gap-4 select-none cursor-pointer border border-[#4e4e4e31] p-10 rounded-lg hover:shadow-xl transition-all">
       <div className="text-green-800">
@@ -17,21 +23,16 @@ const Card = ({ star, title, imgSrc }) => {
         {star}
       </div>
       <h2 className="text-lg font-semibold mb-2">{title}</h2>
-      <p className="leading-loose">
-        Get working experience to work with this amazing team & in future want
-        to work together for bright future projects and also make deposit to
-        freelancer.
-      </p>
+      <p className="leading-loose">{desc}</p>
       <div className="flex items-center gap-4 mt-5">
         <Image src={imgSrc} width={50} height={50} alt="testimonials" />
         <div>
-          <h3 className="font-semibold">Naseem Khan</h3>
           <Link
-            href="https://github.com/NaseemKhan005"
+            href=""
             target="_blank"
             className="text-green-800 font-[500]"
           >
-            @naseemkhan
+            @soltexsystems
           </Link>
         </div>
       </div>
@@ -46,35 +47,56 @@ const Testimonials = () => {
       id="testimonial"
     >
       <div>
-        <span className="service-name text-center ">TESTIMONIAL</span>
-        <h2 className="title text-center ">Meet Client Satisfaction</h2>
+        <h2 className="title text-center ">Our Values</h2>
+        <span className="service-name text-center ">Mission & Vision</span>
       </div>
       <Carousel {...carouselParams}>
         <div>
           <Card
-            star={<StarHalfRoundedIcon />}
-            title="Modern look & trending design"
-            imgSrc="/testimonials/1.png"
-          />
-        </div>
-        <div>
-          <Card
-            title="Layout and organized layers"
-            imgSrc="/testimonials/2.png"
+            star={<StarRoundedIcon />}
+            title="Empower Businesses with Advanced IT Solutions"
+            imgSrc={img1}
+            desc="Soltex Systems strives to deliver innovative IT solutions that empower businesses to thrive in a digital-first world. We focus on tailored strategies that address unique needs."
           />
         </div>
         <div>
           <Card
             star={<StarRoundedIcon />}
-            title="Design Quality & performance"
-            imgSrc="/testimonials/3.png"
+            title="Drive Job Creation Through Technological Advancements"
+            imgSrc={img2}
+            desc="At Soltex Systems, we are dedicated to generating job opportunities through IT consulting services. Our focus is on creating impactful roles that drive growth and innovation."
           />
         </div>
         <div>
           <Card
-            star={<StarHalfRoundedIcon />}
-            title="Layout and organized layers"
-            imgSrc="/testimonials/4.png"
+            star={<StarRoundedIcon />}
+            title="Lead Industry Standards with Innovative IT Strategies"
+            imgSrc={img3}
+            desc="Soltex Systems is dedicated to advancing technology by implementing the latest innovations. Our mission is to ensure clients leverage the most effective solutions."
+          />
+        </div>
+        <div>
+          <Card
+            star={<StarRoundedIcon />}
+            title="Innovative IT Leadership"
+            imgSrc={img4}
+            desc="Soltex Systems envisions becoming a global leader in IT innovation, driving advancements that shape the future of technology. We aim to set new standards for excellence."
+          />
+        </div>
+        <div>
+          <Card
+            star={<StarRoundedIcon />}
+            title="Transformative Impact on Industries"
+            imgSrc={img5}
+            desc="Our goal is to partner with diverse sectors to implement technology that revolutionizes their processes and enhances their competitive edge in the market."
+          />
+        </div>
+        <div>
+          <Card
+            star={<StarRoundedIcon />}
+            title="Empowering Global Talent"
+            imgSrc={img6}
+            desc="Our vision includes creating a diverse and inclusive workforce that reflects the global nature of technology and fosters innovation through varied perspectives and experiences."
           />
         </div>
       </Carousel>

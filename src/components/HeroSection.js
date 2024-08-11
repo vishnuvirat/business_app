@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import img1 from "../../public/1.jpg"
 
 const HeroSection = ({ theme }) => {
   return (
@@ -35,14 +36,14 @@ const HeroSection = ({ theme }) => {
           </Link>
         </button>
       </div>
-      <section
+      {/* <section
         className="text-center flex flex-col gap-10 sm:gap-20 items-center justify-center h-full mt-28 sm:mt-32 md:mt-44 border-2 border-black"
         id="home"
       >
         <div className="w-full relative">
           <div className="before:w-full before:h-full before:absolute before:top-0 before:left-0 before:bg-[url('/herobg1.png')] before:bg-left-bottom before:bg-contain before:bg-no-repeat before:-z-50 after:w-full after:h-full after:absolute after:top-0 after:left-0 after:bg-[url('/herobg2.png')] after:bg-right after:bg-contain after:bg-no-repeat after:-z-50">
             <Image
-              src={"/hero.png"}
+              src={img1}
               width={1100}
               height={500}
               alt="hero Image"
@@ -50,7 +51,7 @@ const HeroSection = ({ theme }) => {
             />
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

@@ -57,3 +57,25 @@ input::placeholder {
 .scrollbar::-webkit-scrollbar {
   height: 0;
 }
+
+@keyframes bgColorChange {
+  0% {
+    background-color: #991b1b; /* bg-red-800 */
+  }
+  25% {
+    background-color: #1e3a8a; /* bg-blue-800 */
+  }
+  50% {
+    background-color: #6b21a8; /* bg-purple-800 */
+  }
+  75% {
+    background-color: #065f46; /* bg-green-800 */
+  }
+  100% {
+    background-color: #991b1b; /* bg-red-800 */
+  }
+}
+
+.bg-color-change {
+  animation: bgColorChange 8s infinite;
+}

@@ -33,7 +33,7 @@ const Navbar = () => {
     };
   }, []);
 
-  if (!mounted) return null;
+  // if (!mounted) return null;
 
   return (
  <>

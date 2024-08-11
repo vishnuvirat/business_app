@@ -10,19 +10,20 @@ import Team from "@/components/Team";
 import Testimonials from "@/components/Testimonials";
 import Work from "@/components/Work";
 import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
 
 export default function Home() {
   return (
     <div className="flex flex-col gap-16 md:gap-32">
-      
-      <Navbar/>
+      {/* <HeroSection/> */}
+      {/* <Navbar/> */}
       <Features />
-      <Services />
-      <QualityFeatures />
-      <CoreFeatures />
+      {/* <Services /> */}
+      {/* <QualityFeatures /> */}
+      {/* <CoreFeatures /> */}
       <Work />
-      <Pricing />
-      <Team />
+      {/* <Pricing /> */}
+      {/* <Team /> */}
       <Testimonials />
       <Subscribe />
       <Community />

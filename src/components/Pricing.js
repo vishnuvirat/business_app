@@ -17,30 +17,32 @@ const Plan = ({ title }) => {
 
 const PricingCard = ({ name, title, price, btnText, trail }) => {
   return (
-    <div className="mx-2 md:mx-3 cursor-pointer p-10 transition-all hover:shadow-lg flex flex-col gap-12 rounded-3xl border-neutral-200">
-      <div className="flex flex-col gap-3">
-        <h2 className="text-xl font-semibold capitalize">{name}</h2>
-        <span className="text-neutral-500">{title}</span>
-      </div>
-      <div className="flex flex-col gap-5">
-        <Plan title="Drag & Drop Builder" />
-        <Plan title="1,000's of Templates" />
-        <Plan title="Blog Support Tools" />
-        <Plan title="eCommerce Store" />
-      </div>
-      <div className="mx-auto">
-        <h2 class="text-4xl text-center leading-none flex items-center pb-4 mb-4">
-          <span>${price}</span>
-          <span class="text-lg ml-1 font-normal text-neutral-500">
-            /Monthly
+    <div className="">
+      <div className="mx-2 md:mx-3 cursor-pointer p-10 transition-all hover:shadow-lg flex flex-col gap-12 rounded-3xl border-1 border-neutral-200 justify-center">
+        <div className="flex flex-col gap-3">
+          <h2 className="text-xl font-semibold capitalize">{name}</h2>
+          <span className="text-neutral-500">{title}</span>
+        </div>
+        <div className="flex flex-col gap-5">
+          <Plan title="Drag & Drop Builder" />
+          <Plan title="1,000's of Templates" />
+          <Plan title="Blog Support Tools" />
+          <Plan title="eCommerce Store" />
+        </div>
+        <div className="mx-auto">
+          <h2 class="text-4xl text-center leading-none flex items-center pb-4 mb-4">
+            <span>${price}</span>
+            <span class="text-lg ml-1 font-normal text-neutral-500">
+              /Monthly
+            </span>
+          </h2>
+          <button className="w-fit capitalize text-base hover:bg-green-800 hover:shadow-md hover:shadow-rose-600 hover:border-2 border-2 border-transparent py-3 px-6 text-white bg-rose-600 hover:border-green-800 hover:text-white rounded-full">
+            {btnText}
+          </button>
+          <span className="block text-green-800 mt-5 font-semibold animate-bounce cursor-pointer">
+            {trail}
           </span>
-        </h2>
-        <button className="w-fit capitalize text-base hover:bg-green-800 hover:shadow-md hover:shadow-rose-600 hover:border-2 border-2 border-transparent py-3 px-6 text-white bg-rose-600 hover:border-green-800 hover:text-white rounded-full">
-          {btnText}
-        </button>
-        <span className="block text-green-800 mt-5 font-semibold animate-bounce cursor-pointer">
-          {trail}
-        </span>
+        </div>
       </div>
     </div>
   );
@@ -55,8 +57,8 @@ const Pricing = () => {
         id="pricing"
       >
         <div>
-          <span className="service-name text-center ">PRICING PLAN</span>
-          <h2 className="title text-center ">Choose your pricing policy</h2>
+          <span className="service-name text-center ">Mission and Vision</span>
+          <h2 className="title text-center ">Our Values</h2>
         </div>
 
         <div className="relative transition-all flex gap-1 mx-auto w-fit bg-slate-100 p-2 rounded-full">
@@ -86,30 +88,23 @@ const Pricing = () => {
         {plan === "Monthly Plan" ? (
           <Carousel {...carouselParams}>
             <PricingCard
-              name="Free Plan"
+              name="Mission"
+              title="Empower Businesses with Advanced IT Solutions"
+              price="0"
+              btnText="Start free trail"
+            />
+            <PricingCard
+              name="Mission"
               title="For Small teams or office"
               price="0"
               btnText="Start free trail"
             />
             <PricingCard
-              name="Business king"
-              title="For Enterprise business"
-              price="15"
-              btnText="Create account"
-              trail="Or Start 14 Days trail"
+              name="Mission"
+              title="For Small teams or office"
+              price="0"
+              btnText="Start free trail"
             />
-            <div className="relative">
-              <span className="absolute -top-1 left-10 bg-rose-600 text-white px-2 py-1 rounded-md">
-                Suggested
-              </span>
-              <PricingCard
-                name="Pro Master"
-                title="For pro level developers"
-                price="24"
-                btnText="Create account"
-                trail="Or Start 14 Days trail"
-              />
-            </div>
           </Carousel>
         ) : (
           <Carousel {...carouselParams}>
@@ -119,25 +114,6 @@ const Pricing = () => {
               price="0"
               btnText="Start free trail"
             />
-            <PricingCard
-              name="Business/Company"
-              title="For Enterprise business"
-              price="25"
-              btnText="Create account"
-              trail="Or Start 10 Days trail"
-            />
-            <div className="relative">
-              <span className="absolute -top-1 left-10 bg-rose-600 text-white px-2 py-1 rounded-md">
-                Suggested
-              </span>
-              <PricingCard
-                name="Pro Master"
-                title="For pro level developers"
-                price="54"
-                btnText="Create account"
-                trail="Or Start 10 Days trail"
-              />
-            </div>
           </Carousel>
         )}
       </section>
